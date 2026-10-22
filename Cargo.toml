@@ -1,0 +1,18 @@
+[package]
+name = "reserfisi"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.95"
+
+[dependencies]
+argon2 = "0.5"
+chrono = { version = "0.4", features = ["serde"] }
+dotenvy = "0.15"
+serde = { version = "1", features = ["derive"] }
+sha2 = "0.10"
+sqlx = { version = "0.8", features = ["runtime-tokio-rustls", "postgres", "chrono", "uuid", "migrate"] }
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "signal"] }
+topcoat = { version = "=0.6.2", default-features = false, features = ["router", "serve", "view"] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+uuid = { version = "1", features = ["v4", "serde"] }
